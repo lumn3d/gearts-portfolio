@@ -39,54 +39,11 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 .process-strip figcaption{padding:10px 0;font-size:13px;line-height:1.5;color:var(--ink)}.process-strip figcaption span{color:var(--accent);font-weight:700;padding-right:5px}
 @media(max-width:767px){.exploration-pair{grid-template-columns:1fr;gap:42px}.exploration-work:nth-child(2){margin:0}.strip-01{grid-template-columns:1fr}.strip-02{grid-template-columns:repeat(2,minmax(0,1fr))}.pigment-study{height:190px}}
 
-/* Full-page painted paper. The white in the supplied painting blends into
-   each section's paper tone; the art itself stays at full saturation. */
-:root{--paint-sheet:url("../assets/design/watercolor-field.jpg")}
-main{--paper:#fff8e9;--paint-x:63%;--paint-y:-5vw}
-main>section:is(#home,#part-1,#part-2,#reflection,#appendices,#consent){
-  background-color:var(--paper);
-  background-image:linear-gradient(90deg,rgba(255,249,237,.96) 0%,rgba(255,249,237,.88) 22%,rgba(255,249,237,.68) 44%,transparent 66%),var(--paint-sheet);
-  background-size:100% 100%,clamp(820px,112vw,2500px) auto;
-  background-repeat:no-repeat,repeat-y;
-  background-position:0 0,var(--paint-x) var(--paint-y);
-  background-blend-mode:normal,multiply;
-}
-main>#part-1{--paper:#f4f1ff;--paint-x:38%;--paint-y:-18vw}
-main>#part-2{--paper:#fff0db;--paint-x:83%;--paint-y:-13vw}
-main>#appendices{--paper:#fff5e8;--paint-x:25%;--paint-y:-22vw}
-main>#reflection{--paper:#fff0db;--ink:#25251f;--muted:#4d493f;color:var(--ink)}
-#reflection em{color:#963c30}#reflection .eyebrow{background:#f4dfc6;color:var(--ink)}
-main>#consent{--paint-y:-24vw}
+/* Keep exhibition descriptions beneath their titles, without the full-page watercolor overlay. */
 .section-heading,.exhibition-chapter-heading{
   display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;text-align:left;
 }
 .section-heading{gap:14px}
-.section-heading>p,.exhibition-chapter-heading p{margin:0;max-width:62ch;text-align:left;color:#3d3933}
+.section-heading>p,.exhibition-chapter-heading p{margin:0;max-width:62ch;text-align:left}
 .exhibition-chapter-heading{gap:10px}
 .exhibition-chapter-heading p{margin-top:10px}
-.section-heading h2:after,.hero-copy h1:after{content:none}
-.artwork-caption,.work-label,.process-heading,.process-strip figcaption,.section-note,.guidelines{
-  background:#fff9ee; color:#29271f;
-}
-.artwork-caption,.work-label{padding:16px 20px}
-.process-heading,.process-strip figcaption,.section-note{padding:10px 14px}
-.section-note{width:fit-content;max-width:100%}
-.pigment-study{background:var(--paint-sheet) center/cover no-repeat}.pigment-study i{display:none}
-@media(max-width:767px){
-  main>section:is(#home,#part-1,#part-2,#reflection,#appendices,#consent){
-    background-size:100% 100%,max(155vw,560px) auto;
-    background-image:linear-gradient(90deg,rgba(255,249,237,.9),rgba(255,249,237,.55) 55%,transparent 96%),var(--paint-sheet);
-  }
-  .section-heading>p,.exhibition-chapter-heading>div,.hero-copy,.blank-space:not(:empty){
-    background:rgba(255,249,237,.94);padding:10px 12px;
-  }
-  .section-heading>p,.exhibition-chapter-heading>div,.hero-copy{padding-left:0}
-}
-
-@media(max-width:767px){
-  .section-heading,.exhibition-chapter-heading{
-    background:linear-gradient(90deg,#fff9edeb 0%,#fff9eddb 86%,#fff9ed77 100%);
-    padding-block:14px;
-  }
-  .section-heading>p,.exhibition-chapter-heading>div{background:transparent;padding:0}
-}
