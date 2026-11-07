@@ -6,3 +6,4 @@ node_modules/
 *.blend
 *.blend1
 .openai/
+# GitHub Pages publishing retry; no website assets changed.
