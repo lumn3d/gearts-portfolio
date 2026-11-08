@@ -62,3 +62,13 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 .reflection-copy p+p{margin-top:22px}
 .strip-03{grid-template-columns:repeat(2,minmax(0,1fr));max-width:880px}
 @media(max-width:767px){.profile-photo{width:126px;height:150px}.exploration-work--placeholder{grid-column:auto}.ruins-mount{min-height:210px}.strip-03{grid-template-columns:1fr}}
+
+.portfolio-redirect{background:#e9c47b;color:var(--ink);--accent:#963c30}
+.portfolio-redirect .eyebrow{background:#f7edda}
+.portfolio-redirect .section-heading{margin-bottom:30px}
+.portfolio-redirect .section-heading>p{max-width:58ch}
+.portfolio-button{display:inline-flex;align-items:center;gap:24px;padding:16px 22px;background:#304572;color:#fff8ea;font-size:14px;font-weight:600;transition:transform .4s var(--spring),background .4s var(--spring)}
+.portfolio-button span{font-size:20px}
+.portfolio-button:hover{transform:translateY(-3px);background:#253e76}
+.portfolio-button:active{transform:scale(.98)}
+@media(prefers-reduced-motion:reduce){.portfolio-button{transition:none}}
