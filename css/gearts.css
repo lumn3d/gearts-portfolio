@@ -96,3 +96,13 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 /* Enlarge the artist portrait and soften its lower edge into the poster. */
 .poster-inner .profile-photo{width:120%;height:120%;mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%)}
 @media(max-width:767px){.poster-inner .profile-photo{width:120%;height:120%}}
+
+/* In-page full artwork viewer. */
+.artwork-lightbox{position:fixed;width:min(96vw,1440px);max-width:none;max-height:96vh;padding:16px;border:0;background:#f7f1e6;color:#24251f;box-shadow:0 32px 100px #0a122c80;overflow:auto}
+.artwork-lightbox::backdrop{background:#101727e8;backdrop-filter:blur(4px)}
+.lightbox-image{display:block;width:auto;height:auto;max-width:100%;max-height:calc(90vh - 68px);margin:0 auto;object-fit:contain}
+.lightbox-close{position:absolute;top:8px;right:8px;z-index:2;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;background:#edbb57;color:#24251f;font:400 28px/1 'Space Grotesk',sans-serif;cursor:pointer}
+.lightbox-close:hover{background:#f3cc45}
+.lightbox-caption{margin:10px 52px 0;text-align:center;font-size:13px;line-height:1.5;color:#626256}
+.poster-inner .profile-photo{width:135%;height:135%}
+@media(max-width:767px){.artwork-lightbox{width:calc(100vw - 20px);max-height:96vh;padding:10px}.lightbox-image{max-height:calc(88vh - 56px)}.poster-inner .profile-photo{width:135%;height:135%}}
