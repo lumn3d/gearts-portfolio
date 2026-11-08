@@ -89,3 +89,10 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 .ruins-mount{display:block;padding:0;overflow:hidden;background:#211f1b;border:0}
 .ruins-mount img{display:block;width:100%;height:auto;max-height:660px;object-fit:contain;background:#211f1b}
 @media(max-width:767px){.poster-inner .pigment-study{height:300px}.poster-inner .profile-photo{width:100%;height:100%}}
+
+/* Fit the panoramic Ruins image to its full natural height. */
+.ruins-mount{aspect-ratio:auto;min-height:0;height:auto}
+.ruins-mount img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+/* Enlarge the artist portrait and soften its lower edge into the poster. */
+.poster-inner .profile-photo{width:120%;height:120%;mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%)}
+@media(max-width:767px){.poster-inner .profile-photo{width:120%;height:120%}}
