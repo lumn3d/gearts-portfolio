@@ -111,3 +111,7 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 .poster-inner .poster-label,.poster-inner .poster-caption{position:relative;z-index:3;text-shadow:0 1px 2px #17294a80}
 .poster-inner .profile-photo{width:270%;height:270%;mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%)}
 @media(max-width:767px){.poster-inner .profile-photo{width:270%;height:270%}}
+
+/* Keep the doubled portrait within the poster while its lower edge fades before the caption. */
+.poster-inner .profile-photo{width:240%;height:240%;mask-image:linear-gradient(to bottom,#000 0%,#000 40%,transparent 70%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 40%,transparent 70%,transparent 100%)}
+@media(max-width:767px){.poster-inner .profile-photo{width:240%;height:240%}}
