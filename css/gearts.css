@@ -106,3 +106,8 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 .lightbox-caption{margin:10px 52px 0;text-align:center;font-size:13px;line-height:1.5;color:#626256}
 .poster-inner .profile-photo{width:135%;height:135%}
 @media(max-width:767px){.artwork-lightbox{width:calc(100vw - 20px);max-height:96vh;padding:10px}.lightbox-image{max-height:calc(88vh - 56px)}.poster-inner .profile-photo{width:135%;height:135%}}
+
+/* Scale the portrait to twice its current size and keep it inside the poster frame. */
+.poster-inner .poster-label,.poster-inner .poster-caption{position:relative;z-index:3;text-shadow:0 1px 2px #17294a80}
+.poster-inner .profile-photo{width:270%;height:270%;mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 55%,transparent 100%)}
+@media(max-width:767px){.poster-inner .profile-photo{width:270%;height:270%}}
