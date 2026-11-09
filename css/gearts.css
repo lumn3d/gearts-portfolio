@@ -115,3 +115,7 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 /* Keep the doubled portrait within the poster while its lower edge fades before the caption. */
 .poster-inner .profile-photo{width:240%;height:240%;mask-image:linear-gradient(to bottom,#000 0%,#000 40%,transparent 70%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 40%,transparent 70%,transparent 100%)}
 @media(max-width:767px){.poster-inner .profile-photo{width:240%;height:240%}}
+
+/* Restore the Ruins artwork's clean white mount while preserving its full panoramic height. */
+.ruins-mount{padding:clamp(8px,1.2vw,18px);background:#fffbf3;border:0;box-shadow:0 8px 22px #352e1c12}
+.ruins-mount img{background:transparent}
