@@ -119,3 +119,8 @@ section{padding:96px var(--gutter)}.hero{padding-top:38px;padding-bottom:64px}.e
 /* Restore the Ruins artwork's clean white mount while preserving its full panoramic height. */
 .ruins-mount{padding:clamp(8px,1.2vw,18px);background:#fffbf3;border:0;box-shadow:0 8px 22px #352e1c12}
 .ruins-mount img{background:transparent}
+
+
+/* Let the Ruins artwork span the full available Part II width. */
+#part-2 .exploration-work--placeholder{max-width:none;width:100%}
+#part-2 .ruins-mount{width:100%}
